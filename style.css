@@ -1,0 +1,139 @@
+* {
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family:'Montserrat',Helvetica,Arial,Lucida,sans-serif;
+    /* font-family: Menlo,Consolas,monaco,monospace; */
+    /* Comfortaa */
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box; */
+    /* box-sizing: content-box; */
+}
+
+/* html { height: 100%; } */
+
+body{
+    min-height: 100vh;
+
+    /* background-image: linear-gradient(to right, rgba(255, 255, 255, 0.215) 100% 100%), url('./cache/Bakcrground2.jpg'); */
+    /* background-size: 100% 300%; */
+    /* background: linear-gradient(0.25turn, #c1bbb6, #fdc789, #f69d3c); */
+    /* background: linear-gradient(to left, #fff4f4, #fadbdb 50%, #eee 75%, #ffdbdb 75%); */
+
+    object-fit: fill;
+    /* object-position: 50% 50%; */
+    /* background-image: linear-gradient(to right, rgba(255, 255, 255, 0.215) 100% 100%), url('./cache/background.jpeg'); */
+    background-size: cover;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* Navigation Bar: */
+
+#NavigationBar {
+    display: flex;
+    background-color: transparent;
+    border-bottom: 1px solid grey;
+    position: absolute;
+    height: 20%;
+}
+
+nav .navigational{
+    display: inline-flex;
+    padding: 1.5em;
+    border: transparent solid 3px;
+}
+
+nav .navigational.selected {
+    border: black solid 3px;
+}
+
+/* nav img { height: 50%; } */
+
+#Home {
+    width: 60%;
+}
+
+#HamburgerMenu {
+    width: 40%;
+}
+
+#HamburgerButton {
+    display: none;
+}
+
+#HamburgerButton img {
+    width: 8%;
+}
+
+#HamLinks {
+    display: flex;
+    flex-direction: row;
+}
+
+#HamLinks li {
+    text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+    #HamburgerButton {
+        display: flex;
+    }
+
+    nav .navigational{
+        display: inline-flex;
+        padding: 0.8em;
+    }
+
+    #HamLinks {
+        flex-direction: column;
+    }
+
+    #HamLinks.Collapsed {
+        display: none;
+    }
+
+    #HamLinks.Visible {
+        display: flex;
+    }
+    
+    #Login {
+        height: 100%;
+        width: 8.5%;
+    }
+}
+
+/* Section 1 */
+
+#Welcome {
+    background: url("./cache/massage26.jpg");
+    padding-top: 12em;
+    padding-bottom: 12em;
+}
+
+
+
+
+#BookingBar {
+    display: flex;
+    background-color: #f7a191;
+}
+
+#BookingBar * {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+
+.Card > img {
+    width: 21%;
+}
