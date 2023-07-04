@@ -31,6 +31,25 @@ a {
     text-decoration: none;
 }
 
+h2 {
+    color: white;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+h4 {
+    text-transform: lowercase;
+}
+
+hr { 
+    width: 4em;
+    color: #f7a191;
+}
+
+
+
 
 /* Navigation Bar: */
 
@@ -39,7 +58,17 @@ a {
     background-color: transparent;
     border-bottom: 1px solid grey;
     position: absolute;
-    height: 20%;
+    /* height: 20%; */
+}
+
+nav a img {
+    width: 30%;
+    /* height: 20%; */
+}
+
+nav a {
+    height: 30%;
+    width: 70%;
 }
 
 nav .navigational{
@@ -59,7 +88,8 @@ nav .navigational.selected {
 }
 
 #HamburgerMenu {
-    width: 40%;
+    width: 25%;
+    height: 30%;
 }
 
 #HamburgerButton {
@@ -113,7 +143,146 @@ nav .navigational.selected {
     background: url("./cache/massage26.jpg");
     padding-top: 12em;
     padding-bottom: 12em;
+    padding-left: 14em;
+    /* margin-left: auto;
+    margin-right: auto;
+    width: 75%; */
 }
+
+#Welcome * {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+
+
+
+
+.Card {
+    display: inline-grid;
+    text-align: center;
+    justify-items: center;
+}
+
+.Card > img {
+    width: 90%;
+}
+
+#DeserveCard .Card > img {
+    width: 21%;
+}
+
+#MeetTeam .Card > img {
+    width: 67%;
+    height: 256px;
+}
+
+.Card p {
+    width: 55%;
+}
+
+.Card h5 {
+    font-weight: bold;
+}
+
+
+
+button {
+    background-color: #00a395;
+    padding: 1.5em;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    color: #defffa;
+}
+
+#Services {
+    width: 80%;
+    display: grid;
+    justify-items: center;
+
+    margin-top: 8em;
+    margin-bottom: 4em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#Services * { 
+    margin-top: 1em;
+}
+
+#Services p {
+    width: 45%;
+    text-align: center;
+}
+
+#Services span {
+    /* background-image: url('./cache/massage12.jpg'); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 26em;
+    height: 22em;
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    /* color: white; */
+}
+
+#Services span:nth-child(1) {
+    background-image: url('./cache/massage12.jpg');
+}
+
+#Services span:nth-child(2) {
+    background-image: url('./cache/massage33.jpg');
+}
+
+#Services span:nth-child(3) {
+    background-image: url('./cache/massage32.jpg');
+}
+
+
+
+
+
+#Uniques {
+    margin-left: 14em;
+    margin-top: 4em;
+}
+
+#Uniques * {
+    /* margin-left: 1em; */
+    margin-right: 1em;
+}
+
+#Uniques img {
+    width: 24em;
+    height: 32em;
+}
+
+#UniquesPoints {
+    display: flex;
+    width: 150%;
+}
+
+#UniquesPoints span {
+    width: 30%;
+}
+
+#UniquesBlock {
+    display: flex;
+}
+
+#UniquesReasons {
+    width: 60%;
+}
+
+ul {
+    list-style-image: url('./cache/icons_check.png');
+    list-style-position: inside;
+    margin-bottom: 2em;
+    /* list-style-type: circle; */
+}
+
 
 
 
@@ -121,19 +290,184 @@ nav .navigational.selected {
 #BookingBar {
     display: flex;
     background-color: #f7a191;
+    align-items: center;
 }
 
 #BookingBar * {
-    padding-top: 3em;
-    padding-bottom: 3em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#BookingBar h3 {
+    color: white;
+    height: 30%;
+
+    margin-left: 16em;
     margin-left: auto;
+
+}
+
+#BookingBar button {
+    background-color: white;
+    color: black;
+    height: 30%;
+
+    margin-left: 16em;
     margin-right: auto;
 }
 
 
 
 
+#Studio {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
 
-.Card > img {
-    width: 21%;
+}
+
+#Studio * {
+    margin-bottom: 2em;
+    margin-left: auto;
+}
+
+#Studio div * {
+    text-align: right;
+}
+
+#Studio div {
+    width: 35%;
+    margin-left: auto;
+}
+
+#Studio div p {
+    width: 85%;
+    text-align: right;
+}
+
+#Studio img {
+    width: 35%;
+    display: inline;
+
+    margin-left: 6em;
+    margin-right: auto;
+}
+
+
+
+
+#DeserveCard .Card {
+    width: 30%;
+}
+
+#DeserveCard {
+    display: flex;
+}
+
+
+
+
+
+#Deserve {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+}
+
+#Deserve * {
+    margin-bottom: 2em;
+    /* margin-left: auto; */
+}
+
+#Deserve div * {
+    text-align: left;
+}
+
+#Deserve div {
+    width: 35%;
+    margin-right: auto;
+}
+
+#Deserve div p {
+    width: 85%;
+    text-align: left;
+}
+
+#Deserve img {
+    width: 35%;
+    display: inline;
+
+    margin-right: 6em;
+    margin-left: auto;
+}
+
+#Deserve h4 {
+    text-transform: capitalize;
+}
+
+
+
+
+
+
+#BeautyBlog {
+    width: 80%;
+    display: grid;
+    justify-items: center;
+
+    margin-top: 8em;
+    margin-bottom: 4em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#BeautyBlog * { 
+    margin-top: 1em;
+}
+
+
+#BeautyBlog span {
+    display: inline-flex;
+
+    /* background-repeat: no-repeat;
+    background-size: cover;
+    width: 26em;
+    height: 22em;
+    text-align: center;
+    justify-content: center; */
+}
+
+
+
+
+#MeetTeam {
+    width: 80%;
+    display: grid;
+    justify-items: center;
+
+    /* margin-top: 8em; */
+    margin-bottom: 4em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#MeetTeam * { 
+    margin-top: 1em;
+}
+
+#MeetTeam span {
+    display: inline-flex;
+
+    /* width: 26em;
+    height: 22em; */
+    text-align: center;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
