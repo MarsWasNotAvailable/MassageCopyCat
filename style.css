@@ -50,6 +50,13 @@ hr {
 
 
 
+header {
+    position: fixed;
+    top: 0;
+    z-index: 1030; /* to prevent the navbar getting covered up by other content */
+    background: rgba(56, 55, 55, 0.719);
+    width: 100%;
+ }
 
 /* Navigation Bar: */
 
@@ -73,7 +80,7 @@ nav a {
 
 nav .navigational{
     display: inline-flex;
-    padding: 1.5em;
+    padding: 0.5em;
     border: transparent solid 3px;
 }
 
@@ -103,6 +110,7 @@ nav .navigational.selected {
 #HamLinks {
     display: flex;
     flex-direction: row;
+    margin: 0;
 }
 
 #HamLinks li {
@@ -141,6 +149,11 @@ nav .navigational.selected {
 
 #Welcome {
     background: url("./cache/massage26.jpg");
+    background-size: cover;
+    object-fit: fill;
+    object-position: 50% 50%;
+    background-repeat: no-repeat;
+
     padding-top: 12em;
     padding-bottom: 12em;
     padding-left: 14em;
@@ -471,3 +484,12 @@ footer {
     margin-left: auto;
     margin-right: auto;
 }
+
+
+/** TODO:
+ * Take the most from above and shove in: ContentBoxes class
+ */
+.ContentBoxes {
+
+}
+
