@@ -17,10 +17,10 @@
             <div id="HamburgerMenu">
                 <button id="HamburgerButton" class="navigational"><img src="./cache/icons_Hamburger.png" onclick="ToggleHamburger()"></button>
                 <ul id="HamLinks" class="Collapsed">   
-                    <li class="navigational"><a href="./index.html">Homepage</a></li>
-                    <li class="navigational"><a href="./articles.html">About Us</a></li>
-                    <li class="navigational"><a href="./contact.html">Page & Projects</a></li>
-                    <li class="navigational"><a href="./contact.html">Blog</a></li>
+                    <li class="navigational"><a href="./index.php">Homepage</a></li>
+                    <li class="navigational"><a href="./articles.php">Articles</a></li>
+                    <li class="navigational"><a href="./gestion.php">New Article</a></li>
+                    <li class="navigational"><a href="./contact.php">Contact</a></li>
                     <li class="navigational"><button>Contact</button></li>
                 </ul>
             </div>

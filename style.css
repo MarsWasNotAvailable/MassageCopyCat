@@ -57,7 +57,7 @@ hr {
     display: flex;
     background-color: transparent;
     border-bottom: 1px solid grey;
-    position: absolute;
+    /* position: absolute; */
     /* height: 20%; */
 }
 
@@ -84,7 +84,7 @@ nav .navigational.selected {
 /* nav img { height: 50%; } */
 
 #Home {
-    width: 60%;
+    width: 50%;
 }
 
 #HamburgerMenu {
