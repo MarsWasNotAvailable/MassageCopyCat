@@ -36,7 +36,7 @@ $NewConnection = new MaConnexion("massage", "root", "", "localhost");
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
 
-                    <form action="crud-produit.php" method="post">
+                    <form action="crud.php" method="post">
                         <div class="modal-body">
                             <div class="card" style="width: 18rem;">
                                 <div class="card-body">
@@ -51,14 +51,23 @@ $NewConnection = new MaConnexion("massage", "root", "", "localhost");
                                         <label class="card-text" for="resume" class="form-label">Resume</label>
                                         <textarea type="text" class="form-control" id="resume" name="resume" placeholder="Insert a resume here" required></textarea>
                                     </div>
+
                                     <div class="mb-3">
                                         <label class="card-text" for="titre2" class="form-label">Title 2</label>
                                         <input class="form-control" id="titre2" rows="3" name="titre2" placeholder="Insert a sub title here" required></textarea>
                                     </div>
-
                                     <div class="mb-3">
                                         <label class="card-text" for="contenu2" class="form-label">Content 2</label>
                                         <input class="form-control" id="contenu2" rows="3" name="contenu2" placeholder="Insert a sub content here" required></textarea>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label class="card-text" for="titre3" class="form-label">Title 3</label>
+                                        <input class="form-control" id="titre3" rows="3" name="titre2" placeholder="Insert a sub title here" required></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="card-text" for="contenu3" class="form-label">Content 3</label>
+                                        <input class="form-control" id="contenu3" rows="3" name="contenu3" placeholder="Insert a sub content here" required></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -100,9 +109,14 @@ $NewConnection = new MaConnexion("massage", "root", "", "localhost");
             <table class="table table-dark table-hover">
                 <thead>
                     <tr>
-                        <th>Nom</th>
-                        <th>Prix</th>
-                        <th>Description</th>
+                        <th>Titre</th>
+                        <th>Resume</th>
+                        <th>Titre 2</th>
+                        <th>Contenu 2</th>
+                        <th>Titre 3</th>
+                        <th>Contenu 3</th>
+                        <th>Photo</th>
+                        <th>Date</th>
                         <th>Action<button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#CreateModal">Add</button></th>
                     </tr>
                 </thead>
@@ -113,16 +127,27 @@ $NewConnection = new MaConnexion("massage", "root", "", "localhost");
                         echo '<form id="MainForm" action="crud.php" method="post" >';
                         // echo '<input type="text" class="form-control" id="CurrentName" name="CurrentName" placeholder="Insert name here for update." required hidden value="' . $EachValue['Nom'] . '">';
 
-                        // echo "<tr>";
-                        // echo '<td><input type="text" class="form-control" id="NameUpdate" name="Name" placeholder="Insert new name here" required value="' . $EachValue['Nom'] . '"></td>';
-                        // echo '<td><input type="number" step="0.01" min="0.01" class="form-control" id="PriceUpdate" name="Price" placeholder="Insert a new price here" value="' . $EachValue['Prix'] . '"></td>';
-                        // echo '<td><textarea class="form-control" id="DescriptionUpdate" rows="3" name="Description" placeholder="Insert a new description here" >' . $EachValue['Description'] . '</textarea></td>';
-                        // echo '<td>';
+                        echo "<tr>";
+                        echo '<td><input type="text" class="form-control" id="TitleUpdate" name="titre" placeholder="Insert new title here" required value="' . $EachValue['titre'] . '"></td>';
+
+                        echo '<td><textarea class="form-control" id="Resume" rows="3" name="resume" placeholder="Insert a new resume here" >' . $EachValue['resume'] . '</textarea></td>';
+
+                        // echo '<td><input type="text" class="form-control" id="Resume" name="resume" placeholder="Insert new resume here" required value="' . $EachValue['resume'] . '"></td>';
+                        echo '<td><input type="text" class="form-control" id="Title2" name="titre2" placeholder="Insert new title here" required value="' . $EachValue['titre2'] . '"></td>';
+                        echo '<td><input type="text" class="form-control" id="Content2" name="contenu2" placeholder="Insert new content here" required value="' . $EachValue['contenu2'] . '"></td>';
+                        echo '<td><input type="text" class="form-control" id="Title3" name="titre3" placeholder="Insert new title here" required value="' . $EachValue['titre3'] . '"></td>';
+                        echo '<td><input type="text" class="form-control" id="Content3" name="contenu3" placeholder="Insert new content here" required value="' . $EachValue['contenu3'] . '"></td>';
+
+                        echo '<td><input type="text" class="form-control" id="Photo" name="photo" placeholder="Insert new title here" required value="' . $EachValue['photo'] . '"></td>';
+                        echo '<td><input type="text" class="form-control" id="DatePublication" name="datepublication" placeholder="Insert new content here" required value="' . $EachValue['datepublication'] . '"></td>';
+
+                        echo '<td>';
                         // echo '<button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#CreateModal">Add</button>';
-                        // echo '<button type="submit" name="Intention" value="Update" class="btn btn-primary mb-3" >Update</button>';
-                        // echo '<button type="button" name="Intention" value="Delete" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#DeleteModal">Delete</button>';
-                        // echo '</td>';
-                        // echo "</tr>";
+                        echo '<button type="submit" name="Intention" value="Update" class="btn btn-primary mb-3" >Update</button>';
+                        echo '<button type="button" name="Intention" value="Delete" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#DeleteModal">Delete</button>';
+                        echo '</td>';
+
+                        echo "</tr>";
                         echo '</form>';
                     }
                     ?>

@@ -23,9 +23,13 @@
             switch ($_POST['Intention']) {
                 case 'Create':
                     $Success = $NewConnection->insert($TableName, array(
-                        'Nom' => $_POST['Name'],
-                        'Prix' => $_POST['Price'],
-                        'Description' => $_POST['Description']
+                        'titre' => $_POST['titre'],
+                        'resume' => $_POST['resume'],
+                        'titre2' => $_POST['titre2'],
+                        'contenu2' => $_POST['contenu2'],
+                        'titre3' => $_POST['titre2'],
+                        'contenu3' => $_POST['contenu2'],
+                        'photo' => './cache/massage26.jpg'
                     ));
             
                     if ($Success)
