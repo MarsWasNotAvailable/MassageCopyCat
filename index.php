@@ -11,23 +11,9 @@
     <title>Accueil</title>
 </head>
 <body>
-    <header>
-        <nav id="NavigationBar">
-            <a id="Home" class="navigational" href="#"><img src="./cache/massage_logo_header-1.png" alt="company header logo"></a>
-            <div id="HamburgerMenu">
-                <button id="HamburgerButton" class="navigational"><img src="./cache/icons_Hamburger.png" onclick="ToggleHamburger()"></button>
-                <ul id="HamLinks" class="Collapsed">   
-                    <li class="navigational"><a href="./index.php">Homepage</a></li>
-                    <li class="navigational"><a href="./articles.php">Articles</a></li>
-                    <li class="navigational"><a href="./gestion.php">New Article</a></li>
-                    <li class="navigational"><a href="./contact.php">Contact</a></li>
-                    <li class="navigational"><button>Contact</button></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <?php include './components/header.php' ?>
 
-    <section id="Welcome" class="ContentBoxes">
+    <section id="Welcome" class="">
         <img src="./cache/icon05.png" alt="">
         <h1>Welcome</h1>
         <h2>In beauty paradise</h2>
@@ -35,7 +21,7 @@
         <button>Book a massage</button>
     </section>
     
-    <section id="Services" class="ContentBoxes">
+    <section id="Services" class="CardPresentation">
         <h4>What we do</h4>
         <h3>Our services</h3>
         <hr>
@@ -47,7 +33,7 @@
         </div>
     </section>
 
-    <section id="Uniques" class="ContentBoxes">
+    <section id="Uniques" class="">
         <h4>What makes us unique</h4>
         <div id="UniquesBlock">
             <div id="UniquesReasons">
@@ -69,12 +55,12 @@
         </div>
     </section>
 
-    <section id="BookingBar" class="ContentBoxes">
+    <section id="BookingBar" class="">
         <h3>Book a massage today</h3>
         <button>Book a massage today</button>
     </section>
 
-    <section id="Studio" class="ContentBoxes">
+    <section id="Studio" class="SideBySide">
         <div>
             <h4>Introducing Massage Studio</h4>
             <hr>
@@ -84,35 +70,35 @@
         <img src="./cache/massage35-1.jpg" alt="" srcset="">
     </section>
 
-    <section id="DeserveCard" class="ContentBoxes">
+    <section id="DeserveCard" class="">
             <div class="Card">
                 <img src="./cache/icon08.png" alt="">
                 <h5>Top Privacy</h5>
                 <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text corel ozel lorem.</p>
             </div>
             <div class="Card">
-                <img src="./cache/icon08.png" alt="">
+                <img src="./cache/icon01.png" alt="">
                 <h5>Top Privacy</h5>
                 <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text corel ozel lorem.</p>
             </div>
             <div class="Card">
-                <img src="./cache/icon08.png" alt="">
+                <img src="./cache/icon03.png" alt="">
                 <h5>Top Privacy</h5>
                 <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text corel ozel lorem.</p>
             </div>
             <div class="Card">
-                <img src="./cache/icon08.png" alt="">
+                <img src="./cache/icon04.png" alt="">
                 <h5>Top Privacy</h5>
                 <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text corel ozel lorem.</p>
             </div>
             <div class="Card">
-                <img src="./cache/icon08.png" alt="">
+                <img src="./cache/icon10.png" alt="">
                 <h5>Top Privacy</h5>
                 <p>Lorem Ipsum is simply dummy text. Lorem Ipsum is simply dummy text corel ozel lorem.</p>
             </div>
     </section>
 
-    <section id="Deserve" class="ContentBoxes">
+    <section id="Deserve" class="SideBySide">
         <img src="./cache/massage39.jpg" alt="">
         <div>
             <h4>You deserve your time!</h4>
@@ -122,7 +108,7 @@
         </div>
     </section>
 
-    <section id="BeautyBlog" class="ContentBoxes">
+    <section id="BeautyBlog" class="CardPresentation">
         <h4>magazine</h4>
         <h3>Our beauty blog</h3>
         <hr>
@@ -149,7 +135,7 @@
         </span>
     </section>
 
-    <section id="MeetTeam" class="ContentBoxes">
+    <section id="MeetTeam" class="CardPresentation">
         <h4>meet our team</h4>
         <h3>Our awesome masseurs</h3>
         <hr>
@@ -160,9 +146,9 @@
                 <h5>Amelie Schweinsteiger</h5>
                 <p>In publishing and graphic design, lorem ipsum is common</p>
                 <span>
-                    <button><img src="./cache/icons_socials_Facebook.png" alt=""></button>
-                    <button><img src="./cache/icons_socials_Twitter.png" alt=""></button>
-                    <button><img src="./cache/icons_socials_Instagram.png" alt=""></button>
+                    <a href="#"><img src="./cache/icons_socials_Facebook.png" alt=""></a>
+                    <a href="#"><img src="./cache/icons_socials_Twitter.png" alt=""></a>
+                    <a href="#"><img src="./cache/icons_socials_Instagram.png" alt=""></a>
                 </span>
             </div>
 
@@ -171,9 +157,9 @@
                 <h5>Annia Levanderr</h5>
                 <p>In publishing and graphic design, lorem ipsum is common</p>
                 <span>
-                    <button><img src="./cache/icons_socials_Facebook.png" alt=""></button>
-                    <button><img src="./cache/icons_socials_Twitter.png" alt=""></button>
-                    <button><img src="./cache/icons_socials_Instagram.png" alt=""></button>
+                    <a href="#"><img src="./cache/icons_socials_Facebook.png" alt=""></a>
+                    <a href="#"><img src="./cache/icons_socials_Twitter.png" alt=""></a>
+                    <a href="#"><img src="./cache/icons_socials_Instagram.png" alt=""></a>
                 </span>
             </div>
 
@@ -182,9 +168,9 @@
                 <h5>Nina Heitelberger</h5>
                 <p>In publishing and graphic design, lorem ipsum is common</p>
                 <span>
-                    <button><img src="./cache/icons_socials_Facebook.png" alt=""></button>
-                    <button><img src="./cache/icons_socials_Twitter.png" alt=""></button>
-                    <button><img src="./cache/icons_socials_Instagram.png" alt=""></button>
+                    <a href="#"><img src="./cache/icons_socials_Facebook.png" alt=""></a>
+                    <a href="#"><img src="./cache/icons_socials_Twitter.png" alt=""></a>
+                    <a href="#"><img src="./cache/icons_socials_Instagram.png" alt=""></a>
                 </span>
             </div>
 
@@ -193,19 +179,15 @@
                 <h5>Kiki Katzenmiller</h5>
                 <p>In publishing and graphic design, lorem ipsum is common</p>
                 <span>
-                    <button><img src="./cache/icons_socials_Facebook.png" alt=""></button>
-                    <button><img src="./cache/icons_socials_Twitter.png" alt=""></button>
-                    <button><img src="./cache/icons_socials_Instagram.png" alt=""></button>
+                    <a href="#"><img src="./cache/icons_socials_Facebook.png" alt=""></a>
+                    <a href="#"><img src="./cache/icons_socials_Twitter.png" alt=""></a>
+                    <a href="#"><img src="./cache/icons_socials_Instagram.png" alt=""></a>
                 </span>
             </div>
         </span>
     </section>
 
-    <!-- <footer class="ContentBoxes">
-        Footer goes brrr
-        <hr>
-        Copyright Massage Humburg
-    </footer> -->
+    <?php include './components/footer.php' ?>
 
 </body>
 </html>

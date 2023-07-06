@@ -29,6 +29,16 @@ body{
 
 a {
     text-decoration: none;
+    color: #979695;
+}
+
+button {
+    background-color: #00a395;
+    padding: 1.5em;
+    border: none;
+    border-radius: 0;
+    text-transform: uppercase;
+    color: #defffa;
 }
 
 h2 {
@@ -50,6 +60,8 @@ hr {
 
 
 
+
+
 header {
     position: fixed;
     top: 0;
@@ -64,8 +76,6 @@ header {
     display: flex;
     background-color: transparent;
     border-bottom: 1px solid grey;
-    /* position: absolute; */
-    /* height: 20%; */
 }
 
 nav a img {
@@ -138,11 +148,6 @@ nav .navigational.selected {
     #HamLinks.Visible {
         display: flex;
     }
-    
-    #Login {
-        height: 100%;
-        width: 8.5%;
-    }
 }
 
 /* Section 1 */
@@ -200,16 +205,9 @@ nav .navigational.selected {
 
 
 
-button {
-    background-color: #00a395;
-    padding: 1.5em;
-    border: none;
-    border-radius: 0;
-    text-transform: uppercase;
-    color: #defffa;
-}
 
-#Services {
+
+/* #Services {
     width: 80%;
     display: grid;
     justify-items: center;
@@ -218,7 +216,7 @@ button {
     margin-bottom: 4em;
     margin-left: auto;
     margin-right: auto;
-}
+} */
 
 #Services * { 
     margin-top: 1em;
@@ -258,13 +256,9 @@ button {
 
 
 #Uniques {
+    display: grid;
     margin-left: 14em;
     margin-top: 4em;
-}
-
-#Uniques * {
-    /* margin-left: 1em; */
-    margin-right: 1em;
 }
 
 #Uniques img {
@@ -274,11 +268,10 @@ button {
 
 #UniquesPoints {
     display: flex;
-    width: 150%;
 }
 
 #UniquesPoints span {
-    width: 30%;
+    width: 50%;
 }
 
 #UniquesBlock {
@@ -289,7 +282,7 @@ button {
     width: 60%;
 }
 
-ul {
+#Uniques ul {
     list-style-image: url('./cache/icons_check.png');
     list-style-position: inside;
     margin-bottom: 2em;
@@ -332,43 +325,6 @@ ul {
 
 
 
-#Studio {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-
-}
-
-#Studio * {
-    margin-bottom: 2em;
-    margin-left: auto;
-}
-
-#Studio div * {
-    text-align: right;
-}
-
-#Studio div {
-    width: 35%;
-    margin-left: auto;
-}
-
-#Studio div p {
-    width: 85%;
-    text-align: right;
-}
-
-#Studio img {
-    width: 35%;
-    display: inline;
-
-    margin-left: 6em;
-    margin-right: auto;
-}
-
-
-
-
 #DeserveCard .Card {
     width: 30%;
 }
@@ -379,66 +335,9 @@ ul {
 
 
 
-
-
-#Deserve {
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-
-}
-
-#Deserve * {
-    margin-bottom: 2em;
-    /* margin-left: auto; */
-}
-
-#Deserve div * {
-    text-align: left;
-}
-
-#Deserve div {
-    width: 35%;
-    margin-right: auto;
-}
-
-#Deserve div p {
-    width: 85%;
-    text-align: left;
-}
-
-#Deserve img {
-    width: 35%;
-    display: inline;
-
-    margin-right: 6em;
-    margin-left: auto;
-}
-
-#Deserve h4 {
-    text-transform: capitalize;
-}
-
-
-
-
-
-
-#BeautyBlog {
-    width: 80%;
-    display: grid;
-    justify-items: center;
-
-    margin-top: 8em;
-    margin-bottom: 4em;
-    margin-left: auto;
-    margin-right: auto;
-}
-
 #BeautyBlog * { 
     margin-top: 1em;
 }
-
 
 #BeautyBlog span {
     display: inline-flex;
@@ -453,17 +352,9 @@ ul {
 
 
 
-
-#MeetTeam {
-    width: 80%;
-    display: grid;
-    justify-items: center;
-
-    /* margin-top: 8em; */
-    margin-bottom: 4em;
-    margin-left: auto;
-    margin-right: auto;
-}
+/* #MeetTeam {
+    margin-top: 0em;
+} */
 
 #MeetTeam * { 
     margin-top: 1em;
@@ -479,17 +370,146 @@ ul {
 }
 
 footer {
-    display: flex;
+    display: grid;
+
+    /* background-image: url('./cache/massage16.jpg'); */
+    background-image: linear-gradient(to right, rgba(59, 55, 55, 0.747) 100% 100%), url('./cache/massage16.jpg');
+
+}
+
+
+footer span {
+    display: inline-flex;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
 }
 
+footer > span:first-child {
+    margin-top: 4em;
+    margin-bottom: 4em;
 
-/** TODO:
- * Take the most from above and shove in: ContentBoxes class
- */
-.ContentBoxes {
+    border-bottom: 1px solid black;
 
+    margin-top: 4em;
+    margin-bottom: 4em;
 }
 
+footer span a {
+    display: block;
+    margin-bottom: 1em;
+}
+
+footer span div {
+    display: inline-grid;
+    margin-right: 10em;
+}
+
+footer span div li {
+    list-style-position: inside;
+}
+
+/* footer span div li:nth-child(1) {
+    list-style-image: url('./cache/icon11.png');
+}
+
+footer span div li:nth-child(2) {
+    list-style-image: url('./cache/icon07.png');
+}
+
+footer span div li:nth-child(2) {
+    list-style-image: url('./cache/icon09.png');
+} */
+
+footer h3 {
+    margin-bottom: 2em;
+}
+
+
+
+
+
+
+#BlogHead{
+    background-image: url("./cache/massage48.jpg");
+    min-height: 489px;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+/** TODO:
+ * Take the most from above and shove in classes
+ */
+
+/* Studio and Deserve */
+.SideBySide {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 2em;
+}
+
+.SideBySide * {
+    margin-bottom: 2em;
+}
+
+.SideBySide div p {
+    width: 85%;
+}
+
+.SideBySide h4 {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.SideBySide > :first-child * {
+    margin-left: auto;
+}
+
+.SideBySide > :first-child {
+    width: 35%;
+    margin-left: auto;
+    text-align: right;
+}
+
+.SideBySide > :last-child {
+    width: 35%;
+    display: inline;
+
+    margin-left: 6em;
+    margin-right: auto;
+
+    text-align: left;
+}
+
+/* Services, BeautyBlog, MeetTeam */
+.CardPresentation {
+    width: 80%;
+    display: grid;
+    justify-items: center;
+
+    margin-top: 8em;
+    margin-bottom: 4em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#MeetTeam {
+    margin-top: 0em;
+}
+
+
+/* 
+    the big picture at the top uses that:
+    linear-gradient(180deg,rgba(45,43,42,0.87) 0%,rgba(45,43,42,0.87) 100%),url(https://massage-theme.richardpruzek.com/wp-content/uploads/2020/02/massage12.jpg)
+ */
+ 
