@@ -18,7 +18,7 @@
 
     <!-- https://massage-theme.richardpruzek.com/blog/ -->
 
-    <title>Accueil</title>
+    <title>Article</title>
 </head>
 
 <body>
@@ -34,17 +34,14 @@
             
             $AllProducts = $NewConnection->select("articles", "*", $Condition);
             foreach ($AllProducts as $EachKey => $EachValue) {
-                $Style = "background-image: url('" . $EachValue['photo'] . "'); background-size: cover; min-height: 489px; width: 100%;";
+                $Style = "background-image: linear-gradient(180deg,rgba(45,43,42,0.87) 0%,rgba(45,43,42,0.87) 100%),url('" . $EachValue['photo'] . "');";
     
-                echo '<section id="ArticleHead" class="CardPresentation" style="' . $Style . '">';
-    
-                echo "<h4 style='color: white;'>" . $EachValue['titre'] . "</h4>";
+                echo '<section id="ArticleHead" class="TopHead" style="' . $Style . '">';
+                echo "<h4>" . $EachValue['titre'] . "</h4>";
                 echo "<h3>Published on " . $EachValue['datepublication'] . "</h3>";
-    
                 echo '</section>';
     
-                echo '<section id="ArticleBody" class="CardPresentation" style="' . '">';
-    
+                echo '<section id="ArticleBody" >';
                 echo "<p>" . $EachValue['resume'] . "</p>";
                 echo "<h5>" . $EachValue['titre2'] . "</h5>";
                 echo "<p>" . $EachValue['contenu2'] . "</p>";

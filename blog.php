@@ -24,7 +24,7 @@ $NewConnection = new MaConnexion("massage", "root", "", "localhost");
 <body>
     <?php include './components/header.php' ?>
 
-    <section id="BlogHead" >
+    <section id="BlogHead" class="TopHead">
         <h4>Our blog</h4>
         <h3>Latest news from us</h3>
     </section>

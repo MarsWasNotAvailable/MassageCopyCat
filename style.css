@@ -1,3 +1,5 @@
+/* TODO: clean this up, add documentation */
+
 * {
     /* font-family: 'Montserrat', sans-serif; */
     font-family:'Montserrat',Helvetica,Arial,Lucida,sans-serif;
@@ -519,13 +521,17 @@ footer h3 {
 
 
 
-#BlogHead{
-    background-image: linear-gradient(180deg,rgba(45,43,42,0.87) 0%,rgba(45,43,42,0.87) 100%),url("./cache/massage48.jpg");
-    background-position: 0 50%;
-    min-height: 489px;
+
+.TopHead * {
+    color: #defffa;
+    margin-bottom: 2.5em;
+}
+
+.TopHead {
+    display: grid;
+
     width: 100%;
 
-    display: grid;
     justify-items: center;
     align-content: center;
 
@@ -533,22 +539,39 @@ footer h3 {
     margin-right: auto;
 }
 
-#BlogHead * {
-    color: #defffa;
-    margin-bottom: 2.5em;
+#BlogHead{
+    background-image: linear-gradient(180deg,rgba(45,43,42,0.87) 0%,rgba(45,43,42,0.87) 100%),url("./cache/massage48.jpg");
+    background-position: 0 50%;
+    min-height: 489px;
 }
 
-/* 
-    the big picture at the top uses that:
-    linear-gradient(180deg,rgba(45,43,42,0.87) 0%,rgba(45,43,42,0.87) 100%),url(https://massage-theme.richardpruzek.com/wp-content/uploads/2020/02/massage12.jpg)
- */
- 
+#ArticleHead{
+    /* background-image: linear-gradient(180deg,rgba(45,43,42,0.87) 0%,rgba(45,43,42,0.87) 100%),url("./cache/massage48.jpg"); */
+    background-position: 25% 50%;
+    min-height: 631px;
+}
 
+#ArticleBody {
+    width: 60%;
+    margin-top: 6em;
+    margin-left: auto;
+    margin-bottom: 6em;
+    margin-right: auto;
+}
 
+#ArticleBody * {
+    margin-bottom: 1.5em;
+}
 
+#ArticleBody p {
+    line-height: 1.8;
+    margin-bottom: 3.5em;
+}
 
-
-
+#ArticleBody h5 {
+    font-size: x-large;
+    text-transform: uppercase;
+}
 
 
 
