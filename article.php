@@ -27,34 +27,38 @@
     <?php
         // titre, resume, titre2, contenu, titre3, contenu3, photo, datepublication
 
-        
-
-        $AllProducts = $NewConnection->select("articles", "*");
-        foreach ($AllProducts as $EachKey => $EachValue) {
-            $Style = "background-image: url('" . $EachValue['photo'] . "'); background-size: cover; min-height: 489px; width: 100%;";
-
-            echo '<section id="ArticleHead" class="CardPresentation" style="' . $Style . '">';
-
-            echo "<h4 style='color: white;'>" . $EachValue['titre'] . "</h4>";
-            echo "<h3>Published on " . $EachValue['datepublication'] . "</h3>";
-
-            echo '</section>';
-
-            echo '<section id="ArticleBody" class="CardPresentation" style="' . '">';
-
-            echo "<p>" . $EachValue['resume'] . "</p>";
-            echo "<h5>" . $EachValue['titre2'] . "</h5>";
-            echo "<p>" . $EachValue['contenu2'] . "</p>";
-
-            echo "<h5>" . $EachValue['titre3'] . "</h5>";
-            echo "<p>" . $EachValue['contenu3'] . "</p>";
-
-            echo '</section>';
-
-            // var_dump($EachKey);
-            // var_dump($EachValue);
-
-            break;
+        // var_dump($_GET);
+        if (isset($_GET['id']))
+        {
+            $Condition = 'id="' . $_GET['id'] . '"';
+            
+            $AllProducts = $NewConnection->select("articles", "*", $Condition);
+            foreach ($AllProducts as $EachKey => $EachValue) {
+                $Style = "background-image: url('" . $EachValue['photo'] . "'); background-size: cover; min-height: 489px; width: 100%;";
+    
+                echo '<section id="ArticleHead" class="CardPresentation" style="' . $Style . '">';
+    
+                echo "<h4 style='color: white;'>" . $EachValue['titre'] . "</h4>";
+                echo "<h3>Published on " . $EachValue['datepublication'] . "</h3>";
+    
+                echo '</section>';
+    
+                echo '<section id="ArticleBody" class="CardPresentation" style="' . '">';
+    
+                echo "<p>" . $EachValue['resume'] . "</p>";
+                echo "<h5>" . $EachValue['titre2'] . "</h5>";
+                echo "<p>" . $EachValue['contenu2'] . "</p>";
+    
+                echo "<h5>" . $EachValue['titre3'] . "</h5>";
+                echo "<p>" . $EachValue['contenu3'] . "</p>";
+    
+                echo '</section>';
+    
+                // var_dump($EachKey);
+                // var_dump($EachValue);
+    
+                break;
+            }
         }
     ?>
 

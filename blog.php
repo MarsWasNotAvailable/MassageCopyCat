@@ -24,13 +24,13 @@ $NewConnection = new MaConnexion("massage", "root", "", "localhost");
 <body>
     <?php include './components/header.php' ?>
 
-    <section id="BlogHead" class="CardPresentation">
+    <section id="BlogHead" >
         <h4>Our blog</h4>
         <h3>Latest news from us</h3>
     </section>
 
     <section id="BeautyBlog" class="CardPresentation">
-        <span>
+        <span id="BeautyBlogCardContainer">
 
             <?php
             // titre, resume, titre2, contenu, titre3, contenu3, photo, datepublication
@@ -38,36 +38,27 @@ $NewConnection = new MaConnexion("massage", "root", "", "localhost");
             $AllProducts = $NewConnection->select("articles", "*");
             foreach ($AllProducts as $EachKey => $EachValue) {
 
-                echo '<div class="Card">';
+                echo '<form method="GET" action="./article.php" class="Card">';
+                echo '<input type="number" name="id" required hidden value="' . $EachValue['id'] . '">';
                 echo '<img src="' . $EachValue['photo'] .  ' " alt="">';
                 echo '<h5>' . $EachValue['titre'] . '</h5>';
                 echo '<h6>by Richard Pruzek</h6>';
-                echo '<button>read more</button>';
-                echo '</div>';
+                // echo '<button name="Intention" value="Read" type="submit">read more</button>';
+                echo '<button type="submit">read more</button>';
+                echo '</form>';
 
                 // var_dump($EachKey);
                 // var_dump($EachValue);
             }
             ?>
 
-            <!-- <div class="Card">
+            <!-- <form method="GET" action="./article.php?id=1" class="Card">
                 <img src="./cache/massage21.jpg" alt="">
                 <h5>Best haircuts trends in 2020</h5>
                 <h6>by Richard Pruzek</h6>
                 <button>read more</button>
-            </div>
-            <div class="Card">
-                <img src="./cache/massage20.jpg" alt="">
-                <h5>New Salon In Wellsboro, PA</h5>
-                <h6>by Richard Pruzek</h6>
-                <button>read more</button>
-            </div>
-            <div class="Card">
-                <img src="./cache/massage07.jpg" alt="">
-                <h5>New Hot Stone Massage</h5>
-                <h6>by Richard Pruzek</h6>
-                <button>read more</button>
-            </div> -->
+            </form> -->
+           
         </span>
     </section>
 

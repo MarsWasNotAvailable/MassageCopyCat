@@ -28,10 +28,12 @@
         //$NewConnection.delete().fromtable("User").where(array( "email" => "example@local") ).execute();
 
         /**Returns an associative array of the results */
-        public function select($Table, $Column)
+        public function select($Table, $Column, $ConditionField = 1)
         {
             try {
-                $SQLQueryString = "SELECT $Column from $Table";
+                // $SQLQueryString = "SELECT $Column FROM $Table WHERE 1";
+                //TODO: that $ConditionField is extremely dangerous, but yet we want the power
+                $SQLQueryString = "SELECT $Column FROM $Table WHERE $ConditionField";
 
                 $Result = $this->Connection->query($SQLQueryString);
 

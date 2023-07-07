@@ -125,7 +125,7 @@ $NewConnection = new MaConnexion("massage", "root", "", "localhost");
                     $AllProducts = $NewConnection->select("articles", "*");
                     foreach ($AllProducts as $EachKey => $EachValue) {
                         echo '<form id="MainForm" action="crud.php" method="post" >';
-                        // echo '<input type="text" class="form-control" id="CurrentName" name="CurrentName" placeholder="Insert name here for update." required hidden value="' . $EachValue['Nom'] . '">';
+                        echo '<input type="text" class="form-control" name="CurrentField" placeholder="Insert name here for update." required hidden value="' . $EachValue['id'] . '">';
 
                         echo "<tr>";
                         echo '<td><input type="text" class="form-control" id="TitleUpdate" name="titre" placeholder="Insert new title here" required value="' . $EachValue['titre'] . '"></td>';
@@ -139,7 +139,7 @@ $NewConnection = new MaConnexion("massage", "root", "", "localhost");
                         echo '<td><input type="text" class="form-control" id="Content3" name="contenu3" placeholder="Insert new content here" required value="' . $EachValue['contenu3'] . '"></td>';
 
                         echo '<td><input type="text" class="form-control" id="Photo" name="photo" placeholder="Insert new title here" required value="' . $EachValue['photo'] . '"></td>';
-                        echo '<td><input type="text" class="form-control" id="DatePublication" name="datepublication" placeholder="Insert new content here" required value="' . $EachValue['datepublication'] . '"></td>';
+                        echo '<td><input type="datetime-local" class="form-control" id="DatePublication" name="datepublication" placeholder="Insert new content here" required value="' . $EachValue['datepublication'] . '"></td>';
 
                         echo '<td>';
                         // echo '<button type="button" class="btn btn-primary mb-3" data-bs-toggle="modal" data-bs-target="#CreateModal">Add</button>';

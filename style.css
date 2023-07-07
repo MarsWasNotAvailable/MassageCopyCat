@@ -33,12 +33,17 @@ a {
 }
 
 button {
-    background-color: #00a395;
+    background-color: #f8b0a3;
     padding: 1.5em;
     border: none;
     border-radius: 0;
     text-transform: uppercase;
     color: #defffa;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #00a395;
 }
 
 h2 {
@@ -85,7 +90,7 @@ nav a img {
 
 nav a {
     height: 30%;
-    width: 70%;
+    width: 100%;
 }
 
 nav .navigational{
@@ -105,12 +110,17 @@ nav .navigational.selected {
 }
 
 #HamburgerMenu {
-    width: 25%;
+    width: 50%;
     height: 30%;
+
+    display: grid;
+    justify-content: right;
 }
 
 #HamburgerButton {
     display: none;
+    background-color: transparent;
+    justify-content: right;
 }
 
 #HamburgerButton img {
@@ -121,10 +131,13 @@ nav .navigational.selected {
     display: flex;
     flex-direction: row;
     margin: 0;
+    width: 100%;
+    justify-content: center;
 }
 
 #HamLinks li {
     text-transform: uppercase;
+    align-items: center;
 }
 
 @media (max-width: 900px) {
@@ -153,7 +166,7 @@ nav .navigational.selected {
 /* Section 1 */
 
 #Welcome {
-    background: url("./cache/massage26.jpg");
+    background: linear-gradient(93deg,#2F2E2D 24%,rgba(41,196,169,0) 100%),url("./cache/massage26.jpg");
     background-size: cover;
     object-fit: fill;
     object-position: 50% 50%;
@@ -161,7 +174,7 @@ nav .navigational.selected {
 
     padding-top: 12em;
     padding-bottom: 12em;
-    padding-left: 14em;
+    padding-left: 8em;
     /* margin-left: auto;
     margin-right: auto;
     width: 75%; */
@@ -170,8 +183,18 @@ nav .navigational.selected {
 #Welcome * {
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+    color: #defffa;
+    font-size: large;
 }
 
+#Welcome h1, #Welcome h2 {
+    font-size: xx-large;
+    text-transform: uppercase;
+}
+
+/* #Welcome img {
+    width: 8%;
+} */
 
 
 
@@ -184,6 +207,14 @@ nav .navigational.selected {
 
 .Card > img {
     width: 90%;
+}
+
+#DeserveCard {
+    display: flex;
+}
+
+#DeserveCard .Card {
+    width: 30%;
 }
 
 #DeserveCard .Card > img {
@@ -203,7 +234,15 @@ nav .navigational.selected {
     font-weight: bold;
 }
 
+@media only screen and (max-width: 900px) {
+    #DeserveCard {
+        flex-direction: column;
+    }
 
+    #DeserveCard .Card {
+        width: 100%;
+    }
+}
 
 
 
@@ -290,6 +329,30 @@ nav .navigational.selected {
 }
 
 
+@media only screen and (max-width: 900px) {
+    /* For mobile phones: */
+
+    #Uniques {
+        /* display: grid; */
+        width: 80%;
+        margin-left: auto;
+        margin-top: auto;
+    }
+
+    #UniquesBlock {
+        display: block;
+    }
+
+    #UniquesPoints {
+        /* display: grid; */
+    }
+    
+    #UniquesPoints span {
+        width: 100%;
+    }
+}
+
+
 
 
 
@@ -322,16 +385,20 @@ nav .navigational.selected {
     margin-right: auto;
 }
 
+@media only screen and (max-width: 900px) {
+    /* For mobile phones: */
 
+    #BookingBar {
+        flex-direction: column;
+    }
 
-
-#DeserveCard .Card {
-    width: 30%;
+    #BookingBar h3, #BookingBar button {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
-#DeserveCard {
-    display: flex;
-}
+
 
 
 
@@ -340,16 +407,17 @@ nav .navigational.selected {
 }
 
 #BeautyBlog span {
-    display: inline-flex;
-
-    /* background-repeat: no-repeat;
-    background-size: cover;
-    width: 26em;
-    height: 22em;
-    text-align: center;
-    justify-content: center; */
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
 }
 
+@media only screen and (max-width: 900px) {
+    /* For mobile phones: */
+
+    #BeautyBlog span {
+        grid-template-columns: 100%;
+    }
+}
 
 
 /* #MeetTeam {
@@ -377,9 +445,16 @@ footer {
 
 }
 
+/* footer span {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+} */
+
 
 footer span {
-    display: inline-flex;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    /* display: inline-flex; */
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -403,6 +478,7 @@ footer span a {
 footer span div {
     display: inline-grid;
     margin-right: 10em;
+    width: 100%;
 }
 
 footer span div li {
@@ -426,17 +502,47 @@ footer h3 {
 }
 
 
+@media only screen and (max-width: 900px) {
+    /* For mobile phones: */
+
+    footer span {
+        grid-template-columns: 100%;
+    }
+
+    footer span div {
+        justify-items: center;
+        margin-right: 0;
+    }
+}
+
 
 
 
 
 #BlogHead{
-    background-image: url("./cache/massage48.jpg");
+    background-image: linear-gradient(180deg,rgba(45,43,42,0.87) 0%,rgba(45,43,42,0.87) 100%),url("./cache/massage48.jpg");
+    background-position: 0 50%;
     min-height: 489px;
     width: 100%;
+
+    display: grid;
+    justify-items: center;
+    align-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
 }
 
+#BlogHead * {
+    color: #defffa;
+    margin-bottom: 2.5em;
+}
 
+/* 
+    the big picture at the top uses that:
+    linear-gradient(180deg,rgba(45,43,42,0.87) 0%,rgba(45,43,42,0.87) 100%),url(https://massage-theme.richardpruzek.com/wp-content/uploads/2020/02/massage12.jpg)
+ */
+ 
 
 
 
@@ -491,11 +597,38 @@ footer h3 {
     text-align: left;
 }
 
+
+@media only screen and (max-width: 900px) {
+    .SideBySide {
+        flex-direction: column;
+    }
+
+    .SideBySide > :first-child, .SideBySide > :last-child {
+        width: 80%;
+
+        margin-left: 0;
+        margin-right: 0;
+
+        text-align: center;
+    }
+
+    .SideBySide > :first-child *, .SideBySide > :last-child * {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .SideBySide hr {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 /* Services, BeautyBlog, MeetTeam */
 .CardPresentation {
     width: 80%;
     display: grid;
     justify-items: center;
+    text-align: center;
 
     margin-top: 8em;
     margin-bottom: 4em;
@@ -507,9 +640,3 @@ footer h3 {
     margin-top: 0em;
 }
 
-
-/* 
-    the big picture at the top uses that:
-    linear-gradient(180deg,rgba(45,43,42,0.87) 0%,rgba(45,43,42,0.87) 100%),url(https://massage-theme.richardpruzek.com/wp-content/uploads/2020/02/massage12.jpg)
- */
- 
